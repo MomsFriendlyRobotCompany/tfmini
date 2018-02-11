@@ -11,10 +11,6 @@ from __future__ import division, print_function
 from serial import Serial
 import time
 
-__author__ = "Kevin Walchko"
-__license__ = "MIT"
-__version__ = "0.1.0"
-
 
 class TFmini(object):
     """

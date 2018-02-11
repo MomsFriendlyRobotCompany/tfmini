@@ -1,4 +1,4 @@
-.. image:: tfmini.jpg
+.. image:: https://raw.githubusercontent.com/MomsFriendlyRobotCompany/tfmini/master/tfmini.jpg
 
 TFmini
 ========
@@ -35,11 +35,9 @@ Reading the sensor returns the range in meters.
 - ``TFmini(port, mode=5, retry=25)``: the constructor takes several inputs
     - ``port``: serial port the sensor is connected too
     - ``mode``: either standard (*default*) or decimal mode
-    - ``retry``: how many times the driver should search the serial port for the
-    packet header. This only applies in standard mode.
+    - ``retry``: how many times the driver should search the serial port for the packet header. This only applies in standard mode.
 - ``read()``: in any mode, returns the distance in meters
-- ``TFmini.strength``: in standard mode, each packet contains the returned IR
-strength level. In decimal mode, this doesn't exist and is always set to -1.
+- ``TFmini.strength``: in standard mode, each packet contains the returned IR strength level. In decimal mode, this doesn't exist and is always set to -1.
 
 Standard (Packet) Mode
 -----------------------------
@@ -61,9 +59,10 @@ ASCII string was read wrong across the serial port. There is no error checking
 in this mode.
 
 .. code-block:: bash
+
     Distance:  2.96
     Distance:  2.96
-    Distance:  96.0
+    Distance:  96.0 <<< Error
     Distance:  2.95
     Distance:  2.95
     Distance:  2.96
