@@ -3,6 +3,15 @@
 TFmini
 ========
 
+Install
+----------
+
+Install using ``pip``:
+
+::
+
+    pip install -U tfmini
+
 Usage
 ------
 
