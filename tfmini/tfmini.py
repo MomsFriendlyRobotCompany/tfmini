@@ -1,13 +1,9 @@
-#!/usr/bin/env python
-#
 # MIT License
 #
 # TFmini appears to be an eye safe laser ... asked for confirmation
 # 120 mW @ 850 nm, class ?
 # Sparkfun website says it is not a laser ... hence, no eye issues
 #
-
-from __future__ import division, print_function
 from serial import Serial
 import time
 

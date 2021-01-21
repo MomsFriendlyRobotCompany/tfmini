@@ -1,9 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # MIT License
 #
 
-from __future__ import division, print_function
 # from serial import Serial
 import time
 from tfmini import TFmini
