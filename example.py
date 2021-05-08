@@ -3,7 +3,6 @@
 # MIT License
 #
 
-# from serial import Serial
 import time
 from tfmini import TFmini
 
@@ -17,7 +16,7 @@ try:
         # d = tf.read()
         # s = q = 0
         if d:
-            print('Distance: {:5}'.format(d))
+            print(f'Distance: {d:5}')
         else:
             print('No valid response')
         time.sleep(0.1)

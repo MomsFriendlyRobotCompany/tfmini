@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "tfmini"
-version = "0.2.0"
+version = "0.3.0"
 description = "A driver for the TFmini LiDAR sold by Sparkfun"
 authors = ["walchko <walchko@users.noreply.github.com>"]
-readme = "readme.rst"
+readme = "readme.md"
 license = "MIT"
 homepage = "https://pypi.org/project/tfmini/"
 repository = 'http://github.com/MomsFriendlyRobotCompany/tfmini'
