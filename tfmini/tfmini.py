@@ -200,11 +200,11 @@ class TFmini(object):
     NOHEADER = 1
     BADCHECKSUM = 2
     TOO_MANY_TRIES = 3
-    DEC_MODE = 4
-    STD_MODE = 5
-    PIX_MODE = 6
+    DEC_MODE = 4  # packet - old name
+    STD_MODE = 5  # packet
+    PIX_MODE = 6  # ascii
 
-    def __init__(self, port, mode=5, retry=2):
+    def __init__(self, port, mode=6, retry=2):
         """
         port: serial port, /dev/tty.usb1234 or /dev/ttyUSB0
         mode: DEC_MODE/PIX_MODE or STD_MODE
