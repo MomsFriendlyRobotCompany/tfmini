@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tfmini"
-version = "0.3.0"
+version = "0.3.1"
 description = "A driver for the TFmini LiDAR sold by Sparkfun"
 authors = ["walchko <walchko@users.noreply.github.com>"]
 readme = "readme.md"

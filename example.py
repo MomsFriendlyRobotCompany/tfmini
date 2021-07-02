@@ -6,20 +6,23 @@
 import time
 from tfmini import TFmini
 
+port = "/dev/tty.usbserial-A904MISU"
 
-tf = TFmini('/dev/tty.usbserial-A506BOT5', mode=TFmini.STD_MODE)
+# mode = TFmini.PIX_MODE # Pixhawk - ascii
+mode = TFmini.STD_MODE # packet
+
+tf = TFmini(port, mode=mode)
 
 try:
     print('='*25)
-    while True:
+    # while True:
+    for _ in range(100):
         d = tf.read()
-        # d = tf.read()
-        # s = q = 0
         if d:
             print(f'Distance: {d:5}')
         else:
             print('No valid response')
-        time.sleep(0.1)
+        time.sleep(0.01)
 
 except KeyboardInterrupt:
     tf.close()
