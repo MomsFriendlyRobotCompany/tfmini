@@ -2,6 +2,11 @@
 
 # TFmini
 
+![GitHub](https://img.shields.io/github/license/MomsFriendlyRobotCompany/tfmini)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tfmini)
+![PyPI](https://img.shields.io/pypi/v/tfmini)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/tfmini?color=aqua)
+
 ## Install
 
 Install using `pip`:
