@@ -39,7 +39,7 @@ except KeyboardInterrupt:
 
 - `TFmini(port, mode=5, retry=2)`: the constructor takes several inputs
     - `port`: serial port the sensor is connected too
-    - `mode`: either standard (*default*) or decimal mode
+    - `mode`: either pixhawk (*default*) or standard mode
     - `retry`: how many times the driver should search the serial port for the packet header. This only applies in standard mode.
 - `read()`: in any mode, returns the distance in meters
 - `TFmini.strength`: in standard mode, each packet contains the returned IR strength level. In decimal mode, this doesn't exist and is always set to -1.
@@ -55,7 +55,7 @@ packet = [0x59, 0x59, distL, distH, strL, strH, reserved, integration time, chec
 Where the first two bytes `0x59, 0x59` are the header and each packet has a
 checksum to ensure the packet is valid data.
 
-## Decimal (String) Mode
+## PixHawk (String) Mode
 
 In this mode, the sensor can sometimes returns an incorrect value because the
 ASCII string was read wrong across the serial port. There is no error checking
