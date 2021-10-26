@@ -46,8 +46,9 @@ class SerialBase:
         self.serial.flushInput()
         self.serial.write(msg)
 
+        # why 15??
         limit = 15
-        for i in range(limit+1):
+        for i in range(limit+1): # why +1?
             ch = self.serial.read(1)
             # print(f">> {ch}")
             if not ch:
@@ -56,8 +57,10 @@ class SerialBase:
             if ch[0] == 0x42:
                 reply = self.serial.read(len(msg) - 1)
                 # print(f">> header {i}")
+                
+                # check if reply is None?
                 return True, reply
-            elif i == limit:
+            elif i == limit: # why? let for loop end at limit, will already return False, None
                 return False, None
         return False, None
 
@@ -65,18 +68,24 @@ class SerialBase:
         """
         return T/F
         """
+        
+        # why do 5 times here? __send() loops already
         for rev in range(5):
             # print(f"{rev}:------------------------")
             ok, reply = self.__send(msg)
             if ok:
+                if reply[2] == 0x01:
+                    # print(">> GOOD copy")
+                    return True
                 break
 
         # self.print("msg:", msg)
         # self.print("reply:", reply)
 
-        if reply[2] == 0x01:
-            # print(">> GOOD copy")
-            return True
+        # --- this is wrong place?
+#         if reply[2] == 0x01:
+#             # print(">> GOOD copy")
+#             return True
 
         # print("*** ERROR ***")
         return False
